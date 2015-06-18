@@ -1,4 +1,3 @@
-
 let file = "p27.txt" (* input file *)
 
 let swap array i j =

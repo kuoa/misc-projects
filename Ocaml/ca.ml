@@ -1,5 +1,5 @@
 let read_input_l file =
-  (** 'a list list of input *)
+  (** string list list of input *)
   (*old versian was read_input*)
 
   let rez = ref [] in
@@ -23,7 +23,7 @@ let read_input_l file =
 ;;
 
 let read_line_l file =
-  (** 'a list of input *)
+  (** string list of input *)
 
   let rez = ref [] in
   let ic = open_in file in
@@ -44,7 +44,7 @@ let read_line_l file =
 ;;
 
 let read_line_a file =
-  (** 'a array of input *)
+  (** string array of input *)
   let s_list = read_line_l file in
   let size = List.length s_list in
   let s_array = Array.make size "" in
@@ -53,7 +53,25 @@ let read_line_a file =
   s_array
 ;;
   
+let read_input_brut file =
+  (** string list of input *)
+ 
+  let rez = ref [] in
+  let ic = open_in file in
+  
+  try
+    while true do
+      let line = input_line ic in
+      rez := line :: !rez
+    done;
 
+    List.rev !rez (* necessary *)
+     
+  with End_of_file ->
+    close_in ic;
+
+    List.rev !rez
+;;
 
 let print_list f list =
   List.iter f list;

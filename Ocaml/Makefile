@@ -5,7 +5,7 @@ SRC = ca.ml
 SRCO = $(SRC:.ml=.cmo)
 SRCI = $(SRC:.ml=.cmi)
 
-MAIN = p3.ml
+MAIN = p47.ml
 MAINO = $(MAIN:.ml=.cmo)
 MAINI = $(MAIN:.ml=.cmi)
 

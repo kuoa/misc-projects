@@ -1,4 +1,4 @@
-let file = "p8.txt"
+let file = "p08.txt"
 
 let string_to_array () =
   let ic = open_in file in

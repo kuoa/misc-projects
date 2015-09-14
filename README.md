@@ -21,5 +21,5 @@ To compile kettle, execute
 	-help   Display this list of options
 	--help  Display this list of options
     
- ### Example
+### Example
  	./kettle -tea black

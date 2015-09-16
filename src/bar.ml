@@ -16,5 +16,7 @@ let print_bar percent =
   let diez_number = int_of_float (float_of_int percent *. float_of_int full_bar /. 100.) in
   let space_number = full_bar - diez_number in
 
+  Printf.printf "\r%3d%% [" percent;
   print_diez 0 diez_number;
-  print_space 0 space_number
+  print_space 0 space_number;
+  flush stdout
